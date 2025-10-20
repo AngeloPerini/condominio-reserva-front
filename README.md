@@ -20,18 +20,21 @@ Datas: react-day-picker e date-fns
 📂 Estrutura de Pastas
 A estrutura de pastas foi organizada para escalabilidade, separando responsabilidades (componentes, layouts, páginas, contextos).
 
-src/
-├── assets/         # Imagens, ícones (Ex: logo)
-├── components/     # Componentes reutilizáveis (Header, Card, PagamentoPix)
-│   ├── ui/         # Elementos base (Botões, Inputs customizados)
-├── contexts/       # Contextos globais (ThemeContext, AuthContext - futuro)
-│   └── ThemeContext.jsx 
-├── layouts/        # Estruturas de página (MainLayout)
-├── pages/          # Páginas principais (Home, Login, Cadastro, DetalheEspaco)
-├── services/       # Lógica de comunicação com a API (Axios/Fetch - futuro)
-├── App.jsx         # Componente raiz e configuração de rotas
-├── index.css       # Estilos globais e customização do calendário (DayPicker)
-└── main.jsx        # Ponto de entrada (Inicializa React e ThemeProvider)
+
+*src/
+├── assets/          # Imagens, ícones (Ex: logo)
+├── components/      # Componentes reutilizáveis (Header, Card, PagamentoPix)
+│   └── ui/          # Elementos base (Botões, Inputs customizados)
+├── contexts/        # Contextos globais (ThemeContext, AuthContext – futuro)
+│   └── ThemeContext.jsx
+├── layouts/         # Estruturas de página (MainLayout)
+├── pages/           # Páginas principais (Home, Login, Cadastro, DetalheEspaco)
+├── services/        # Lógica de comunicação com a API (Axios/Fetch – futuro)
+├── App.jsx          # Componente raiz e configuração de rotas
+├── index.css        # Estilos globais e customização do calendário (DayPicker)
+└── main.jsx         # Ponto de entrada (Inicializa React e ThemeProvider)*
+
+
 ⚙️ Instalação e Execução
 Para rodar o projeto em seu ambiente local, siga os passos abaixo:
 
