@@ -1,0 +1,94 @@
+/* Adicionar ao src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #1a2035;
+    /* dark-blue */
+    color: white;
+    font-family: sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    /* Para transição suave */
+}
+
+/* ---------------------------------------------------------------- */
+/* 2. Tema Claro (Aplicado quando class='light' na tag <html>) */
+/* ---------------------------------------------------------------- */
+html.light {
+    /* Cores claras para o modo light: */
+    --color-bg-primary: #f0f4f8;
+    /* Cinza claro / Branco */
+    --color-bg-secondary: #ffffff;
+    /* Branco puro */
+    --color-text-primary: #1a2035;
+    /* dark-blue para o texto */
+
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+}
+
+/* Meses e Anos (Corrigido para especificidade) */
+.custom-day-picker .rdp-caption_label {
+    color: #1a2035 !important;
+    font-weight: bold;
+}
+
+/* Botões de navegação e Título da Semana */
+.custom-day-picker .rdp-nav_button,
+.custom-day-picker .rdp-head {
+    color: #1a2035;
+    /* ESCURO */
+}
+
+.custom-day-picker .rdp-head {
+    color: #48c459;
+    /* Dias da semana (Verde) */
+}
+
+/* 🚨 CORREÇÃO: COR DOS NÚMEROS */
+.custom-day-picker .rdp-day {
+    color: #333333;
+    /* Números: ESCURO */
+}
+
+.custom-day-picker .rdp-day:hover:not(.rdp-day_selected):not(.rdp-day_disabled) {
+    background-color: #e0e0e0;
+    /* Hover: Cinza CLARO */
+}
+
+/* Estilos de seleção de data (cores fixas) */
+.custom-day-picker .rdp-day_selected {
+    background-color: #48c459 !important;
+    color: #1a2035 !important;
+    font-weight: bold;
+}
+
+.custom-day-picker .rdp-day_today {
+    border: 1px solid #48c459;
+}
+
+/* ------------------------------------------------------------- */
+/* Estilos para o MODO ESCURO (Aplicados apenas quando .dark está ativo) */
+/* Sobrescreve o padrão, aplicando cores CLARAS */
+/* ------------------------------------------------------------- */
+.dark .custom-day-picker .rdp-caption_label,
+.dark .custom-day-picker .rdp-nav_button {
+    color: white !important;
+    /* Meses, anos, botões: CLARO */
+}
+
+.dark .custom-day-picker .rdp-head {
+    color: #48c459;
+    /* Dias da semana: VERDE */
+}
+
+.dark .custom-day-picker .rdp-day {
+    color: #ccc;
+    /* Números: CLARO */
+}
+
+.dark .custom-day-picker .rdp-day:hover:not(.rdp-day_selected):not(.rdp-day_disabled) {
+    background-color: #333d52;
+    /* Hover: Cinza ESCURO */
+}
